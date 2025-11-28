@@ -1,4 +1,5 @@
 const router=require("express").Router();
+const {getSingleUser}=require("../controller/userController");
 
 router.get("/getuser",(req,res)=>{
     res.json({
@@ -6,5 +7,8 @@ router.get("/getuser",(req,res)=>{
         data:[{name:"Saloni"}]
     })
 })
+
+router.get("/getSingleUser",getSingleUser);
+
 
 module.exports=router;
